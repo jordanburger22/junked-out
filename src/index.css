@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", system-ui;
+}
+
+body{
+    background-color: #2d5cf3;
+}

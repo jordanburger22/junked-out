@@ -1,0 +1,350 @@
+.app {
+    position: relative;
+    padding-top: 10vh;
+}
+
+/* Navbar */
+
+.navbar {
+    height: 10vh;
+    background-color: #081405;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 0;
+    z-index: 900;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar-logo {
+    height: 90%;
+    margin-left: 1%;
+}
+
+.navbar-btns {
+    margin-right: 1%;
+    display: flex;
+    align-items: end;
+}
+
+.navbar-btns>button {
+    margin: .5%;
+    border: none;
+}
+
+.burger-menu {
+    width: 2rem;
+}
+
+/* Contact */
+
+.contact {
+    display: flex;
+    padding: 1rem;
+    align-items: start;
+    justify-content: space-around;
+    min-height: 90vh;
+    padding-top: 15vh;
+}
+
+/* Contact Info */
+
+.contact-info-container{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: space-between;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    background-color: #081405;
+    color: white;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7),
+        0px 6px 20px rgba(255, 255, 255, 0.2);
+    font-size: 2.5rem;
+    width: 30vw;
+}
+
+.contact-info >p{
+    margin-top: 1rem;
+    font-size: 1.9rem;
+
+}
+
+.contact-header {
+    color: white;
+}
+
+.contact-header>h1 {
+    font-weight: 500;
+    font-size: 3.5rem;
+}
+
+.contact-header>p{
+    font-size: 1.8rem;
+}
+
+/* Estimate Form */
+
+.estimate-form {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 16px;
+    background-color: #081405;
+    width: fit-content;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7),
+        0px 6px 20px rgba(255, 255, 255, 0.2);
+    width: 40vw;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.submit-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #2d5cf3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    grid-row: 5;
+    grid-column: 1 / 3;
+    width: 100%;
+}
+
+.submit-button:disabled {
+    background-color: #cccccc;
+    color: #666666; 
+    cursor: not-allowed; 
+    opacity: 0.6; 
+}
+
+.submit-button:not(:disabled):hover {
+    background-color: #1c44d4;
+}
+
+/* Home */
+
+.home {
+    padding: 1.5rem;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+}
+
+.home-mid {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.home-header {
+    width: 40vw;
+    background-color: #081405;
+    padding: 1rem;
+    border-radius: 1rem;
+    line-height: 3rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7),
+        0px 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.home-header>h1 {
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.home-header>p {
+    margin-top: 1.3rem;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+}
+
+.card-container {
+    width: 40vw;
+    background-color: #081405;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7),
+        0px 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.card-text {
+    font-weight: 500;
+}
+
+.home-top {
+    height: 35vh;
+    width: 25vw;
+    font-size: 2rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.alt-logo {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+}
+
+a {
+    color: #2d5cf3;
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.modal-off {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; 
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1001; /* Above the overlay */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 80%;
+    text-align: center; /* Center text inside modal */
+}
+
+.modal-content h2 {
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    margin-bottom: 1.5rem;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2d5cf3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #1c44d4;
+}
+
+
+/* Services */
+
+.services {
+    position: relative;
+    overflow: hidden;
+}
+
+.header-img {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.header-img > img {
+    width: 100%;
+    height: auto; 
+}
+
+.services-info {
+    position: relative;
+    max-width: 100vw;
+    min-height: 90vh;
+    margin-top: 90vh; /* Ensure it starts below the header image */
+    background-color: #2d5cf3; /* Background color to contrast with the image */
+    padding: 2rem; /* Add padding for better spacing */
+    z-index: 2; /* Ensure it's on top of header-img */
+}
+
+.services-info h1, 
+.services-info h2 {
+    font-size: 2rem; /* Adjust font size as needed */
+    color: white; /* Match the color with the theme */
+    margin-bottom: 1rem;
+}
+
+.services-info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.services-info ul {
+    list-style-type: disc;
+    padding-left: 2rem; /* Indent list items */
+    color: white;
+}
+
+.services-info ul li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
