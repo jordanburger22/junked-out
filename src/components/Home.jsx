@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/image.png'
 import altLogo from '../assets/junkedout-logo.jpg'
+import ContactInfo from './ContactInfo'
 
 const Home = () => {
 
@@ -21,6 +22,7 @@ const Home = () => {
             <img src={altLogo} className='alt-logo'/>
             <div className="home-top">
                 <h1>Premium Junk Removal and Demolition Service</h1>
+                <ContactInfo showEstimate={false}/>
             </div>
             <div className="home-mid">
                 <div className="home-header">

@@ -12,7 +12,7 @@ const Contact = () => {
 
     return ( 
         <div className="contact">
-            <ContactInfo />
+            <ContactInfo  showEstimate = {true}/>
             <EstimateForm toggleModal={toggleModal}/>
             <ConfirmModal isModalOn={isModalOn} toggleModal={toggleModal}/>
         </div>
