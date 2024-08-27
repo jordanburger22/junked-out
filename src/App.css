@@ -326,13 +326,13 @@ a {
 
 .services-info h1, 
 .services-info h2 {
-    font-size: 2rem; /* Adjust font size as needed */
+    font-size: 2.3rem; /* Adjust font size as needed */
     color: white; /* Match the color with the theme */
     margin-bottom: 1rem;
 }
 
 .services-info p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 1rem;
     color: white;
@@ -345,6 +345,12 @@ a {
 }
 
 .services-info ul li {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
+}
+
+.text-container{
+    background-color: black;
+    width: 60%;
+    padding: 2rem;
 }
