@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Modal, Button } from 'react-bootstrap';
 
-
-
-const ConfirmModal = ({isModalOn, toggleModal}) => {
-
-    
-
-    return ( 
-        <div className={isModalOn ? 'modal' : 'modal-off'}>
-            <div className={isModalOn ? 'overlay' : 'overlay-off'} onClick={toggleModal}></div>
-            <div className="modal-content">
-                <h2>Thank You!</h2>
+const ConfirmModal = ({ isModalOn, toggleModal }) => {
+    return (
+        <Modal show={isModalOn} onHide={toggleModal} centered>
+            <Modal.Header closeButton>
+                <Modal.Title>Thank You!</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
                 <p>Your estimate form has been successfully submitted. We appreciate your interest and will get in touch with you soon.</p>
-                <button onClick={toggleModal}>Close</button>
-            </div>
-        </div>
-     );
+            </Modal.Body>
+            <Modal.Footer>
+                <Button variant="secondary" onClick={toggleModal}>Close</Button>
+            </Modal.Footer>
+        </Modal>
+    );
 }
- 
+
 export default ConfirmModal;

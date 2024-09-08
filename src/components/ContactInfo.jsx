@@ -1,20 +1,24 @@
+import { Container, Row, Col } from 'react-bootstrap';
 
-
-
-const ContactInfo = ({showEstimate}) => {
+const ContactInfo = ({ showEstimate }) => {
     return (
-        <div className="contact-info-container">
-            {showEstimate && 
-            <div className="contact-header">
-                <h1>Get a Free Estimate</h1>
-                <p>Ready to reclaim your space? Contact us for a free estimate and let us handle all your junk removal needs.</p>
-            </div>}
-            <div className="contact-info">
-                <h2>Contact Us!</h2>
-                <p>435-230-0520</p>
-                <p>info@junked-out.com</p>
-            </div>
-        </div>
+        <Container className="contact-info-container text-center">
+            {showEstimate && (
+                <Row className="contact-header mb-4">
+                    <Col>
+                        <h1 className='text-light'>Get a Free Estimate</h1>
+                        <p className=' custom-p'>Ready to reclaim your space? Contact us for a free estimate and let us handle all your junk removal needs.</p>
+                    </Col>
+                </Row>
+            )}
+            <Row className="contact-info">
+                <Col>
+                    <h2 className='text-light'>Contact Us!</h2>
+                    <p className='custom-p'>435-230-0520</p>
+                    <p className='custom-p'>info@junked-out.com</p>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 

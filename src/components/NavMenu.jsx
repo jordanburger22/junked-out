@@ -1,49 +1,51 @@
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
-import burgerMenu from '../assets/burger-menu.svg';
+import { Button, Modal, Nav } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import burgerMenu from '../assets/burger-menu.svg';
 
 export default function NavMenu() {
+    const [show, setShow] = useState(false);
     const navigate = useNavigate();
-    const [anchorEl, setAnchorEl] = useState(null);
 
-    const open = Boolean(anchorEl);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleClose = (route) => {
+    const navigateTo = (route) => {
         navigate(route);
-        setAnchorEl(null);
+        handleClose();
     };
 
     return (
-        <div>
-            <Button
-                id="basic-button"
-                aria-controls={open ? 'basic-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                onClick={handleClick}
+        <>
+            <Button 
+                variant="outline-primary" 
+                onClick={handleShow} 
+                style={{ position: 'absolute', top: 10, right: 10, zIndex: 999 }}
             >
-                <img className='burger-menu' src={burgerMenu} alt="Menu"/>
+                <img 
+                    src={burgerMenu} 
+                    alt="Menu" 
+                    style={{ width: 30, height: 30 }} 
+                />
             </Button>
-            <Menu
-                id="basic-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={() => setAnchorEl(null)}
-                MenuListProps={{
-                    'aria-labelledby': 'basic-button',
-                }}
+
+            <Modal 
+                show={show} 
+                onHide={handleClose} 
+                centered
+                size="lg"  // Adjust size if needed
             >
-                <MenuItem onClick={() => handleClose('/')}>Home</MenuItem>
-                <MenuItem onClick={() => handleClose('/services')}>Services</MenuItem>
-                <MenuItem onClick={() => handleClose('/estimate')}>Estimate</MenuItem>
-            </Menu>
-        </div>
+                <Modal.Header closeButton>
+                    <Modal.Title>Menu</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Nav className="flex-column">
+                        <Nav.Link onClick={() => navigateTo('/')}>Home</Nav.Link>
+                        <Nav.Link onClick={() => navigateTo('/services')}>Services</Nav.Link>
+                        <Nav.Link onClick={() => navigateTo('/estimate')}>Estimate</Nav.Link>
+                    </Nav>
+                </Modal.Body>
+            </Modal>
+        </>
     );
 }
