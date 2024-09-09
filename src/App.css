@@ -181,4 +181,10 @@ body {
     .nav-btn{
         position: relative;
     }
+    .carousel-container{
+        margin-bottom: 10px;
+    }
+    .services{
+        margin-top: 10px;
+    }
 }
