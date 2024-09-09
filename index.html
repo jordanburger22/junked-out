@@ -14,6 +14,26 @@
 
 <body>
   <div id="root"></div>
+  <form name="estimate-form" method="POST" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="estimate-form" />
+    <input type="text" name="zipCode" placeholder="Zip Code" />
+    <input type="date" name="estimatedDate" />
+    <input type="text" name="firstName" placeholder="First Name" />
+    <input type="text" name="lastName" placeholder="Last Name" />
+    <select name="numberOfRooms">
+        <option value="" disabled>Select Number of Rooms</option>
+        <option value="N/A">N/A</option>
+        <option value="studio">Studio</option>
+        <option value="1">1 Bedroom</option>
+        <option value="2">2 Bedrooms</option>
+        <option value="3">3 Bedrooms</option>
+        <option value="4">4 Bedrooms</option>
+        <option value="5+">5+ Bedrooms</option>
+    </select>
+    <input type="email" name="email" placeholder="Email" />
+    <input type="tel" name="phone" placeholder="Phone" />
+</form>
+
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

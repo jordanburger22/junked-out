@@ -28,17 +28,24 @@ const EstimateForm = ({ toggleModal }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(inputs); // Replace with actual submission logic
+        // You can handle additional logic here if needed
         toggleModal();
         setInputs(initInputs);
     };
 
     return (
-        <Form onSubmit={handleSubmit} className="estimate-form">
+        <Form 
+            onSubmit={handleSubmit} 
+            className="estimate-form" 
+            name="estimate-form" 
+            method="POST" 
+            data-netlify="true"
+        >
+            <input type="hidden" name="form-name" value="estimate-form" />
             <Row>
                 <Col md={6}>
                     <Form.Group controlId="zipCode">
-                        <Form.Label className=' custom-p'>Zip Code</Form.Label>
+                        <Form.Label className='custom-p'>Zip Code</Form.Label>
                         <Form.Control
                             type="text"
                             name="zipCode"
@@ -62,7 +69,7 @@ const EstimateForm = ({ toggleModal }) => {
             <Row>
                 <Col md={6}>
                     <Form.Group controlId="firstName">
-                        <Form.Label className=' custom-p'>First Name</Form.Label>
+                        <Form.Label className='custom-p'>First Name</Form.Label>
                         <Form.Control
                             type="text"
                             name="firstName"
@@ -73,7 +80,7 @@ const EstimateForm = ({ toggleModal }) => {
                 </Col>
                 <Col md={6}>
                     <Form.Group controlId="lastName">
-                        <Form.Label className=' custom-p'>Last Name</Form.Label>
+                        <Form.Label className='custom-p'>Last Name</Form.Label>
                         <Form.Control
                             type="text"
                             name="lastName"
@@ -84,7 +91,7 @@ const EstimateForm = ({ toggleModal }) => {
                 </Col>
             </Row>
             <Form.Group controlId="numberOfRooms">
-                <Form.Label className=' custom-p'>Number of Rooms</Form.Label>
+                <Form.Label className='custom-p'>Number of Rooms</Form.Label>
                 <Form.Control
                     as="select"
                     name="numberOfRooms"
@@ -104,7 +111,7 @@ const EstimateForm = ({ toggleModal }) => {
             <Row>
                 <Col md={6}>
                     <Form.Group controlId="email">
-                        <Form.Label className=' custom-p'>Email</Form.Label>
+                        <Form.Label className='custom-p'>Email</Form.Label>
                         <Form.Control
                             type="email"
                             name="email"
@@ -115,7 +122,7 @@ const EstimateForm = ({ toggleModal }) => {
                 </Col>
                 <Col md={6}>
                     <Form.Group controlId="phone">
-                        <Form.Label className=' custom-p'>Phone</Form.Label>
+                        <Form.Label className='custom-p'>Phone</Form.Label>
                         <Form.Control
                             type="tel"
                             name="phone"
