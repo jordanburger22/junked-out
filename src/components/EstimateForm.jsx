@@ -57,13 +57,12 @@ const EstimateForm = ({ toggleModal }) => {
         <>
             <Form 
                 onSubmit={handleSubmit} 
-                className="estimate-form" 
-                name="estimate-form" 
-                method="POST" 
-                data-netlify="true"
+                className="estimate-form"
+                name="estimate-form"
+                method="POST"
                 ref={formRef}
             >
-                <input type="hidden" name="estimate-form" value="estimate-form" />
+                <input type="hidden" name="form-name" value="estimate-form" />
                 <Row>
                     <Col md={6}>
                         <Form.Group controlId="zipCode">
