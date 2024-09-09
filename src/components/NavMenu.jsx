@@ -12,15 +12,16 @@ export default function NavMenu() {
 
     const navigateTo = (route) => {
         navigate(route);
-        handleClose();
+        handleClose(); // Close modal after navigating
     };
 
     return (
         <>
+            {/* This button directly controls the modal */}
             <Button 
                 variant="outline-primary" 
                 onClick={handleShow} 
-                style={{ position: 'absolute', top: 10, right: 10, zIndex: 999 }}
+                style={{ border: 'none', backgroundColor: 'transparent' }}
             >
                 <img 
                     src={burgerMenu} 
@@ -33,7 +34,7 @@ export default function NavMenu() {
                 show={show} 
                 onHide={handleClose} 
                 centered
-                size="lg"  // Adjust size if needed
+                size="lg"
             >
                 <Modal.Header closeButton>
                     <Modal.Title>Menu</Modal.Title>

@@ -143,3 +143,42 @@ body {
 .form-image{
     width: 50vw;
 }
+
+.alt-logo-bottom {
+    max-height: 40vh;
+    margin-left: 20px;
+    /* Add responsive class to hide on small screens */
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .alt-logo-bottom {
+        display: block; /* Show logo on medium screens and up */
+    }
+}
+
+
+@media only screen and (max-width: 576px) {
+    .card-img {
+        height: 10vh; /* Adjust card image height for smaller screens */
+    }
+
+    .card-title-custom {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .custom-p, li {
+        font-size: 1rem; /* Smaller text for mobile */
+    }
+
+    .alt-logo-bottom {
+        max-width: 100%; /* Adjust logo size for mobile */
+    }
+
+    .cards{
+        height: fit-content;
+    }
+    .nav-btn{
+        position: relative;
+    }
+}

@@ -14,6 +14,23 @@ import image12 from '../assets/IMG_4503.jpg';
 import image13 from '../assets/IMG_4504.jpg';
 import image14 from '../assets/IMG_4505.jpg';
 import image15 from '../assets/IMG_4507.jpg';
+import image16 from '../assets/IMG_4520.jpg';
+import image17 from '../assets/IMG_4521.jpg';
+import image18 from '../assets/IMG_4519.jpg';
+import image19 from '../assets/IMG_4518.jpg';
+import image20 from '../assets/IMG_4516.jpg';
+import image21 from '../assets/IMG_4517.jpg';
+import image22 from '../assets/IMG_4533.jpg';
+import image23 from '../assets/IMG_4532.jpg';
+import image24 from '../assets/IMG_4531.jpg';
+import image25 from '../assets/IMG_4530.jpg';
+import image26 from '../assets/IMG_4529.jpg';
+import image27 from '../assets/IMG_4528.jpg';
+import image28 from '../assets/IMG_4527.jpg';
+import image29 from '../assets/IMG_4525.jpg';
+import image30 from '../assets/IMG_4524.jpg';
+import image31 from '../assets/IMG_4523.jpg';
+import image32 from '../assets/IMG_4522.jpg';
 import { Link } from 'react-router-dom';
 
 const Services = () => {
@@ -32,7 +49,24 @@ const Services = () => {
         { src: image12, alt: "Service Image 12" },
         { src: image13, alt: "Service Image 13" },
         { src: image14, alt: "Service Image 14" },
-        { src: image15, alt: "Service Image 15" }
+        { src: image15, alt: "Service Image 15" },
+        { src: image16, alt: "Service Image 16" },
+        { src: image17, alt: "Service Image 17" },
+        { src: image18, alt: "Service Image 18" },
+        { src: image19, alt: "Service Image 19" },
+        { src: image20, alt: "Service Image 20" },
+        { src: image21, alt: "Service Image 21" },
+        { src: image22, alt: "Service Image 22" },
+        { src: image23, alt: "Service Image 23" },
+        { src: image24, alt: "Service Image 24" },
+        { src: image25, alt: "Service Image 25" },
+        { src: image26, alt: "Service Image 26" },
+        { src: image27, alt: "Service Image 27" },
+        { src: image28, alt: "Service Image 28" },
+        { src: image29, alt: "Service Image 29" },
+        { src: image30, alt: "Service Image 30" },
+        { src: image31, alt: "Service Image 31" },
+        { src: image32, alt: "Service Image 32" }
     ];
 
     return (
@@ -60,7 +94,7 @@ const Services = () => {
                     <div className="text-container">
                         <h1 className='text-light'>Our Services</h1>
                         <p className=' custom-p'>
-                            At Junked Out LLC, we provide top-notch junk removal and small structure demolition services for homes and businesses. Whether you need to clear out a single item or an entire home, we're here to help. Our comprehensive services include:
+                            At Junked Out LLC, we specialize in top-tier junk removal and small structure demolition services for both homes and businesses. Whether you need to get rid of a single item or clear out an entire property, we’re ready to assist. Our full range of services is available for residential and commercial needs alike.
                         </p>
                         <h2 className='text-light'>Junk Removal:</h2>
                         <ul>

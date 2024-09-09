@@ -7,22 +7,18 @@ const CustomNavbar = () => {
     const navigate = useNavigate();
 
     return (
-        <Navbar bg="dark" expand="lg">
+        <Navbar bg="dark">
             <Container>
-                <Navbar.Brand onClick={() => navigate('/')}>
+                <Navbar.Brand onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
                     <img 
                         src={logo} 
                         alt="Logo" 
                         className="d-inline-block align-top" 
-                        style={{ cursor: 'pointer', height: '40px' }} 
+                        style={{ height: '40px' }} 
                     />
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                        <NavMenu />
-                    </Nav>
-                </Navbar.Collapse>
+                {/* Directly use NavMenu without Navbar.Toggle */}
+                <NavMenu />
             </Container>
         </Navbar>
     );
