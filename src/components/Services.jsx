@@ -72,28 +72,11 @@ const Services = () => {
     return (
         <Container fluid className="services container-fluid">
             <Row>
-                {/* Carousel on the left side */}
-                <Col lg={6} md={12}>
-                    <Carousel className="carousel-container">
-                        {images.map((image, index) => (
-                            <Carousel.Item key={index} className="carousel-item">
-                                <div className="image-wrapper">
-                                    <img
-                                        className="d-block h-100 carousel-image"
-                                        src={image.src}
-                                        alt={image.alt}
-                                    />
-                                </div>
-                            </Carousel.Item>
-                        ))}
-                    </Carousel>
-                </Col>
-
-                {/* Text on the right side */}
-                <Col lg={6} md={12} className="d-flex align-items-center">
+                {/* Text on the top for mobile (md and smaller) */}
+                <Col lg={6} md={12} className="order-md-1 order-lg-2 d-flex align-items-center">
                     <div className="text-container">
                         <h1 className='text-light'>Our Services</h1>
-                        <p className=' custom-p'>
+                        <p className='custom-p'>
                             At Junked Out LLC, we specialize in top-tier junk removal and small structure demolition services for both homes and businesses. Whether you need to get rid of a single item or clear out an entire property, we’re ready to assist. Our full range of services is available for residential and commercial needs alike.
                         </p>
                         <h2 className='text-light'>Junk Removal:</h2>
@@ -117,9 +100,26 @@ const Services = () => {
                         <p className='custom-p'>Get your free <Link to="/estimate" className='text-dark'>Estimate</Link></p>
                     </div>
                 </Col>
+
+                {/* Carousel underneath text on mobile (md and smaller) */}
+                <Col lg={6} md={12} className="order-md-2 order-lg-1">
+                    <Carousel className="carousel-container">
+                        {images.map((image, index) => (
+                            <Carousel.Item key={index} className="carousel-item">
+                                <div className="image-wrapper">
+                                    <img
+                                        className="d-block h-100 carousel-image"
+                                        src={image.src}
+                                        alt={image.alt}
+                                    />
+                                </div>
+                            </Carousel.Item>
+                        ))}
+                    </Carousel>
+                </Col>
             </Row>
         </Container>
     );
-}
+};
 
 export default Services;
