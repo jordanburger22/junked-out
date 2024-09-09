@@ -37,7 +37,7 @@ const Home = () => {
                     <p className="text-light  custom-p">
                         At Junked Out, we specialize in providing efficient and reliable junk removal services for both residential and commercial clients.
                     </p>
-                    <p className='text-light custom-p'>See what <Link to='/estimate' className="text-dark">Services</Link> we offer.</p>
+                    <p className='text-light custom-p'>See what <Link to='/services' className="text-dark">Services</Link> we offer.</p>
                     <p className='text-light custom-p'>Get your free <Link to='/estimate' className="text-dark">Estimate</Link>.</p>
                 </Col>
             </Row>
