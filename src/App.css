@@ -196,4 +196,8 @@ body {
     .services{
         margin-top: 10px;
     }
+
+    .contact-info-container{
+        margin-top: 10vh;
+    }
 }

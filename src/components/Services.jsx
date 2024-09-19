@@ -86,6 +86,8 @@ const Services = () => {
                             <li>Yard waste</li>
                             <li>Furniture</li>
                             <li>Bagged or boxed garbage</li>
+                            <li>Construction Debris</li>
+                            <li>Recycling</li>
                             <li>And more!</li>
                         </ul>
                         <h2 className='text-light'>Small Structure Demolition:</h2>
